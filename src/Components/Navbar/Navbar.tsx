@@ -46,7 +46,6 @@ function Navbar() {
           transition={{ duration: 0.3 }}
         >
           <img src={logo} alt="" />
-          <p>scout</p>
         </motion.div>
         <motion.div 
           className={style.nav}
