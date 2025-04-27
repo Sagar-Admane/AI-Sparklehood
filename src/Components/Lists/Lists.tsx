@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import style from "./list.module.scss";
 import InciContext from "../../context/context";
 import { motion } from "framer-motion";
+import list from "./list"
 
 function Lists() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -9,6 +10,7 @@ function Lists() {
   if (!context) throw new Error("Context must be used within a Provider");
   
   const { selectedDate, selectedSeverity, listArr, setListArr } = context;
+  const [newLis, setNewLis] = useState(listArr);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -39,12 +41,12 @@ function Lists() {
       });
     }
 
-    setListArr(newList);
+    setNewLis(newList);
   }, [selectedDate, selectedSeverity, listArr, setListArr]);
 
   return (
     <div className={style.container}>
-      {listArr.map((item) => (
+      {newLis.map((item) => (
         <motion.div 
           key={item.id} 
           className={style.listItem}

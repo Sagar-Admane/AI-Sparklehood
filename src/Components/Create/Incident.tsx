@@ -4,6 +4,7 @@ import right from "../../Assets/form_right.svg"
 import { useContext, useState } from "react";
 import InciContext from "../../context/context";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Incident() {
     const context = useContext(InciContext);
@@ -13,6 +14,7 @@ function Incident() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [severity, setSeverity] = useState<"High" | "Medium" | "Low">("High");
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -26,6 +28,7 @@ function Incident() {
         };
 
         setListArr(prevList => [...prevList, newIncident]);
+        navigate("/list")
         
         // Reset form
         setTitle("");
