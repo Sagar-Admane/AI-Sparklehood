@@ -1,0 +1,114 @@
+.container {
+    margin-top: 20px;
+    height: 80vh;    
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 10px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: 1200px) {
+        padding: 10px 50px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 20px;
+    }
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.listItem {
+    // backdrop-filter: blur(120px);
+    background-color: rgba(0, 0, 0, 0.20);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+        padding: 12px;
+    }
+}
+
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #d9cccc;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+
+.severity {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 500;
+
+    &.high {
+        background-color: #fee2e2;
+        color: #dc2626;
+    }
+
+    &.medium {
+        background-color: #fef3c7;
+        color: #d97706;
+    }
+
+    &.low {
+        background-color: #dcfce7;
+        color: #16a34a;
+    }
+}
+
+.date {
+    font-size: 14px;
+    color: #e2dede;
+    margin-bottom: 10px;
+}
+
+.viewDetails {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+
+    &:hover {
+        color: #1d4ed8;
+    }
+}
+
+.description {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #c2c2c2;
+    line-height: 1.5;
+}
+  
