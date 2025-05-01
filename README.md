@@ -99,5 +99,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-Project Link: [https://github.com/yourusername/scout](https://github.com/yourusername/scout)
+linkedin : [My linkedin](https://www.linkedin.com/in/sagaradmane)
+Project Link: [Deployed project link](https://ai-sparklehood.vercel.app/)
